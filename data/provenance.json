@@ -1,0 +1,36 @@
+{
+  "snapshot_date": "2026-10-07",
+  "data_file": "data/explorer-data.json",
+  "data_sha256": "978e8519c0b168ff2f92b5e1d50b1ed5c0cf1633b08ed7bf6ccb9750072d763e",
+  "papers": [
+    {
+      "direction": "Wireless network control",
+      "paper": "https://arxiv.org/abs/2609.23136v2",
+      "code": "https://github.com/OniReimu/6G-JEV",
+      "data": "https://huggingface.co/datasets/OniReimu/6G-JEV"
+    },
+    {
+      "direction": "Edge service orchestration",
+      "paper": "https://arxiv.org/abs/2609.22753v2",
+      "code": "https://github.com/OniReimu/Edge-Computing-JEV",
+      "data": "https://huggingface.co/datasets/OniReimu/Edge-Computing-JEV"
+    },
+    {
+      "direction": "Closed-loop verification",
+      "paper": "https://arxiv.org/abs/2610.06425v1",
+      "code": "https://github.com/OniReimu/SoK-JEV",
+      "data": "https://huggingface.co/datasets/OniReimu/SoK-JEV"
+    }
+  ],
+  "snapshot_origin": "https://jev-research.uxser2024.chatgpt.site",
+  "source_version": "e7b9e9eae6c421d0a1e508e57f7ba50060ad5bc0",
+  "fonts": {
+    "plex-sans.woff2": "a29d4e6345cdb7e2b6daabf4961a6dcafcbc7ed1eac26186ca4a004cd32d64d8",
+    "plex-mono.woff2": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+  },
+  "notes": [
+    "The public aggregate snapshot is carried over unchanged from the validated research page.",
+    "Budget curves contain 61 sampled budgets per model; raw calls have not been independently reanalysed for this website.",
+    "Completion, timing and verification use the separate denominators and endpoints described on the page."
+  ]
+}

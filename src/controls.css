@@ -1,0 +1,161 @@
+/* Shared control sizing, field labels and responsive groups. */
+:root { --control-height: 44px; --control-gap: 8px; }
+
+.control-label,
+.controls label,
+.interaction-heading label,
+.verification-toolbar label,
+.queue-rate,
+.gate-card label,
+.map-controls label {
+  display: block;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  height: var(--control-height);
+  min-width: 0;
+  font-size: 13px;
+  padding: 10px 38px 10px 12px;
+  line-height: 1.4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%23a9bac9' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+}
+
+.pills { gap: var(--control-gap); }
+.pills button,
+.pager button,
+.compare-actions button,
+#walk-play,
+.walk-controls button,
+.text-button,
+.model-toggle,
+.slo-row button {
+  min-height: var(--control-height);
+  line-height: 1.4;
+}
+.pills button,
+.pager button,
+.compare-actions button,
+#walk-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+}
+.pills button { min-width: 0; }
+.text-button { padding: 10px 8px; }
+.tabs button { line-height: 1.4; }
+.tabs button:focus-visible,
+.heat-table button:focus-visible,
+.literature-disclosure > summary:focus-visible { outline-offset: -4px; }
+
+.controls > label { width: 270px; }
+.controls > label select { width: 100%; }
+.interaction-heading > div { min-width: 0; }
+.interaction-heading label { width: 260px; }
+.interaction-heading select { width: 100%; max-width: none; }
+.slo-explorer .interaction-heading label { width: 200px; }
+.interaction-heading input[type=number] {
+  width: 100%;
+  height: var(--control-height);
+  padding: 9px 42px 9px 12px;
+  border-color: #3a5268;
+}
+.input-suffix { right: 14px; bottom: 12px; pointer-events: none; }
+.budget-control input,
+#walk-slider { height: var(--control-height); }
+
+#edge-panel > .controls { flex-wrap: wrap; gap: 20px 32px; }
+#edge-panel > .controls > div { min-width: 0; }
+#edge-settings { gap: 12px; }
+#edge-settings[data-kind=cache] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 284px;
+}
+#edge-settings label,
+#edge-settings select { width: 100%; }
+.compare-actions { flex-direction: row; gap: var(--control-gap); }
+.compare-actions button { white-space: nowrap; }
+
+.verification-toolbar { gap: 20px 28px; }
+.verification-toolbar > label { width: 168px; }
+.verification-toolbar select { width: 100%; }
+.walk-controls button { width: 44px; flex: 0 0 44px; }
+.gate-card select { padding-right: 38px; font-size: 13px; }
+.gate-condition-detail { display: block; margin-top: 8px; font-size: 11px; line-height: 1.6; }
+.gate-comparison b { white-space: nowrap; }
+.methods summary,
+.data-view summary { min-height: 44px; padding: 11px 0; }
+.methods > a,
+.paper-links a,
+.family-source { min-height: 44px; display: inline-flex; align-items: center; }
+.family > summary > .family-title { min-width: 0; }
+.interface-chips { flex-shrink: 0; }
+
+@media (max-width: 1000px) {
+  .comparison-lab .interaction-heading { flex-wrap: wrap; }
+  .comparison-lab .interaction-heading > div:first-child { flex: 1 1 100%; }
+  .compare-actions { margin-top: 0; }
+  .map-controls { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  #edge-panel > .controls { display: grid; grid-template-columns: 1fr; }
+  #edge-settings,
+  #edge-settings[data-kind=cache],
+  #edge-settings > div { width: 100%; }
+  #edge-scenarios { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+  #edge-settings .pills { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+  .interaction-heading { flex-wrap: wrap; }
+  .interaction-heading > div:first-child { flex: 1 1 100%; }
+  .walkthrough .interaction-heading { align-items: flex-start; }
+  .walkthrough .interaction-heading > div:first-child { flex-basis: 100%; }
+}
+
+@media (max-width: 560px) {
+  select,
+  .gate-card select { font-size: 12px; }
+  .tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 10px; }
+  .tabs button { min-width: 0; min-height: 48px; padding: 12px 8px; }
+  .tabs[data-controls=wireless] button:last-child { grid-column: 1 / -1; }
+  .controls > label,
+  .interaction-heading label,
+  .slo-explorer .interaction-heading label { width: 100%; }
+  .interaction-heading label { margin-top: 16px; }
+  .interaction-heading input[type=number] { padding: 9px 42px 9px 12px; }
+  .pills button { padding: 9px 7px; }
+  .budget-presets,
+  .slo-explorer > .pills,
+  #verification-delays { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #quality-options,
+  #ran-rates,
+  .map-toolbar .pills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #edge-settings[data-kind=load] .pills,
+  #map-filters { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-flow: row; }
+  #edge-settings[data-kind=load] .pills button,
+  #map-filters button { grid-column: span 2; }
+  #edge-settings[data-kind=load] .pills button:nth-last-child(-n+2),
+  #map-filters button:nth-last-child(-n+2) { grid-column: span 3; }
+  .compare-actions { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 16px; }
+  .compare-actions button { white-space: normal; padding: 10px 8px; font-size: 11px; }
+  #comparison-presets { display: grid; grid-template-columns: 1fr; }
+  #comparison-presets button { justify-content: flex-start; padding-left: 12px; }
+  .verification-toolbar > label,
+  .verification-toolbar > div { width: 100%; }
+  .queue-rate select { max-width: none; }
+  .walkthrough .interaction-heading { display: flex; gap: 16px; }
+  #walk-play { font-size: 11px; padding: 10px 14px; }
+  .gate-comparison { gap: 14px; justify-content: space-between; }
+  .gate-comparison b { font-size: 20px; }
+  .pager { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; }
+  .pager button { padding: 10px 8px; }
+}
