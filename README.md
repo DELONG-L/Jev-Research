@@ -43,3 +43,7 @@ When intentionally updating the public data, revise its source description and S
 | Closed-loop verification | [SoK: Semantic Decision Engines in Network Control Loops](https://arxiv.org/abs/2610.06425v1) | [Code](https://github.com/OniReimu/SoK-JEV) · [Data](https://huggingface.co/datasets/OniReimu/SoK-JEV) |
 
 This repository contains the website and its public aggregate snapshot. Manuscript authoring files and complete experiment records are maintained with the respective studies. The starting snapshot is the validated [Sites page](https://jev-research.uxser2024.chatgpt.site/).
+
+## License
+
+The website source is released under the [MIT License](LICENSE). The bundled IBM Plex fonts retain their [SIL Open Font License 1.1](assets/fonts/OFL.txt).
