@@ -6,7 +6,7 @@
 
 </div>
 
-[![Jev Research 交互式研究页面](guides/previews/explorer.jpg)](https://delong-l.github.io/Jev-Research/?lang=zh#top)
+[![Jev Research 中文交互式研究页面](guides/previews/explorer-zh.jpg)](https://delong-l.github.io/Jev-Research/?lang=zh#top)
 
 探索 [UTSCybeR 实验室](https://utscyber.com/)关于通信网络中意图解释与决策的三项研究。沿控制环路查看意图和网络状态、决策、执行与验证之间的关系。
 
