@@ -1,31 +1,83 @@
-<div align="center">
+# Jev Research Explorer
 
-<h1>Jev Research Explorer</h1>
-<p>From fast decisions to working networks.</p>
-<p><a href="https://delong-l.github.io/Jev-Research/?lang=en#top"><strong>Explore the research</strong></a> · <a href="https://delong-l.github.io/Jev-Research/?lang=zh#top">中文网站</a> · <a href="README.zh-CN.md">中文说明</a></p>
+Three studies from the [UTSCybeR lab](https://utscyber.com/) on intent interpretation and decision-making in communication networks. Follow the path from intent and network state to a decision, its execution, and a verified outcome.
 
-</div>
+**[Explore →][home]** · [Directions](#directions) · [Chart data][data]
 
-[![Jev Research interactive explorer](guides/previews/explorer.jpg)](https://delong-l.github.io/Jev-Research/)
+[中文网站](https://delong-l.github.io/Jev-Research/?lang=zh#top) · [中文说明](README.zh-CN.md)
 
-Explore three studies from the [UTSCybeR lab](https://utscyber.com/) on intent interpretation and decision-making in communication networks. Follow the control loop from intent and network state through decision, execution, and verification.
+[![Jev Research Explorer. From fast decisions to working networks. A conceptual loop connects intent and state, decision, execution, and verification.](guides/previews/readme-cover-serif-en.png)][home]
 
-## Start with a question
+## Follow the result through the loop
 
-| Research direction | Explore |
-|---|---|
-| [Wireless network control](https://delong-l.github.io/Jev-Research/?lang=en#radio-timing) | Radio outcomes, policy correctness, timing budgets, and control-path endpoints |
-| [Edge service orchestration](https://delong-l.github.io/Jev-Research/?lang=en#edge-orchestration) | Correct, on-time service completion under different loads, deadlines, and cache conditions |
-| [Closed-loop verification](https://delong-l.github.io/Jev-Research/?lang=en#control-verification) | Decision latency, execution acknowledgment, verified outcomes, queues, and constraint checks |
+Decision latency, execution acknowledgment, and verified outcomes use different endpoints. Read them alongside policy correctness, queueing, and service completion to understand what a fast decision delivers.
 
-The interactive views select recorded conditions. They distinguish simulated outcomes, live model calls, modeled execution, and software-stack measurements. English and Chinese routes preserve the selected exploration state.
+<a id="directions"></a>
+## Three research directions
+
+### Wireless network control
+
+Inspect radio SLA violations, cell-edge throughput, and packet delay across arrival rates and UE speeds. Connect these outcomes to policy correctness, deadline fit, queues, and the A1/E2 control path.
+
+[Explore wireless control →][wireless]
+
+### Edge service orchestration
+
+Compare correct, on-time completion under different loads, deadlines, and semantic cache conditions. Explore live admission with modeled service execution and a real OCR service; use A/B comparisons to inspect recorded conditions.
+
+[Explore edge services →][edge]
+
+### Closed-loop verification
+
+Follow a decision through execution ACK to a verified outcome. Examine queue-and-replay results, constraint checks, and the literature explorer's coverage of measurement endpoints and check responsibility.
+
+[Explore verification →][verification]
+
+## Explore the recorded conditions
+
+- **Choose a condition.** Inspect scenarios, timing budgets, and reported aggregates. The views distinguish simulated outcomes, live model calls, modeled execution, and software-stack measurements.
+
+- **Compare with context.** In the edge A/B view, pin one condition while changing the other. Read completion counts together with request p95.
+
+- **Keep your place across languages.** Switching between English and Chinese preserves the selected conditions and exploration state.
+
+<details>
+<summary><strong>View the actual explorer</strong></summary>
+
+[![Actual English-language Jev Research Explorer interface, with the research overview and entry points to the interactive evidence.](guides/previews/explorer.jpg)][home]
+
+[Open the interactive explorer →][home]
+
+</details>
 
 ## Read the evidence
 
-[Studies, papers, and datasets](https://delong-l.github.io/Jev-Research/?lang=en#studies) · [Download chart data](https://delong-l.github.io/Jev-Research/explorer-data.json) · [Detailed explorer guide](guides/explorer.md)
+[Studies and datasets][studies] · [Chart data JSON][data] · [Explorer guide](guides/explorer.md)
 
-Timing fit, policy correctness, and verified completion use different definitions and denominators. Expand the measurement notes before comparing results; the [guide](guides/explorer.md) explains each view and its interpretation.
+Timing fit, policy correctness, and verified completion have different definitions and denominators. Consult the measurement notes for the selected view before comparing results.
+
+<details>
+<summary><strong>What should I check when comparing results?</strong></summary>
+
+- **Evidence source:** distinguish simulations, measured model calls, modeled service execution, and real software or service measurements.
+
+- **Completion and latency:** request p95 uses each model's own completed requests. Keep the completion counts beside the latency comparison.
+
+- **Timing thresholds:** the timing-target lookup uses sampled budgets without interpolation.
+
+The [explorer guide](guides/explorer.md) explains each view and links the three studies to their papers, code, and full datasets.
+
+</details>
 
 ## Licence
 
-The website source is [MIT licensed](LICENSE). Bundled IBM Plex fonts retain the [SIL Open Font License 1.1](assets/fonts/OFL.txt).
+Website source: [MIT](LICENSE). Bundled IBM Plex fonts retain the [SIL Open Font License 1.1](assets/fonts/OFL.txt).
+
+[Explore the research][home] · [Explorer guide](guides/explorer.md) · [Cover and asset notes](guides/visuals.md)
+
+[home]: https://delong-l.github.io/Jev-Research/?lang=en#top
+[wireless]: https://delong-l.github.io/Jev-Research/?lang=en#radio-timing
+[edge]: https://delong-l.github.io/Jev-Research/?lang=en#edge-orchestration
+[verification]: https://delong-l.github.io/Jev-Research/?lang=en#control-verification
+[studies]: https://delong-l.github.io/Jev-Research/?lang=en#studies
+[data]: https://delong-l.github.io/Jev-Research/explorer-data.json
